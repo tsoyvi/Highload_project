@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LoggerController;
+use App\Http\Controllers\MemcachedController;
+use App\Http\Controllers\RedisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,6 @@ Route::get('/', function () {
 
 Route::get('logger', [LoggerController::class, 'index'])->name('logger');
 Route::get('recursion', [LoggerController::class, 'recursion'])->name('recursion');
+Route::get('memcached', MemcachedController::class)->name('memcached');
+Route::get('redis', RedisController::class)->name('redis');
 
